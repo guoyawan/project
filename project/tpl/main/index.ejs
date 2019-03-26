@@ -1,0 +1,166 @@
+<% include ./header.ejs %>
+<% include ./nav.ejs %>
+<div class="cover"></div>
+<div class="main">
+    <div class="top text-center">
+        <img class="top-ban" src="../../public/images/ban3.png" alt="ban">
+        <div class="top-box hidden-xs hidden-sm">
+            <img class="top-logo" src="../../public/images/photo.jpg" alt="photo">
+            <p>这是一个简约而不简单的个人博客主题网站，Made by kiki，一个简单的二次元爱好者。</p>
+        </div>
+    </div>
+    <div class="container">
+        <p class="manger">
+            <% if(usersinfo._id){ %>
+            <a class="play-out" href="javascript:;" id="logout">点击退出登录</a>
+            <% if(usersinfo.isAdmin){ %>
+            你好！ 管理员 <span> <%=usersinfo.username%> </span> 欢迎您进入Clover个人主题博客 ^_^ ！
+            <a href="/admin">点击进入后台管理</a>
+            <% }else{ %>
+            你好！ <span> <%=usersinfo.username%> </span> 欢迎您进入Clover个人主题博客 ^_^ ！
+            <% } %>
+            <% }else{ %>
+            你好！欢迎您浏览Clover个人主题博客 ^_^ ！<a href="/api/user">请点击登录</a>
+            <%}%>
+        </p>
+    </div>
+    <div class="focus-box visible-lg-block">
+        <div class="container">
+            <h3>聚 焦</h3>
+            <ul class="focus">
+                <li class="first-li"><a href="https://github.com/guoyawan/nodejs"><img src="../../public/images/f1.jpg" alt="pic"></a></li>
+                <li><a href="/clover"><img src="../../public/images/clover-con.png" alt="pic"></a></li>
+                <li><a href="javascript:;"><img src="../../public/images/f3.jpg" alt="pic"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="list">
+        <div class="container">
+            <h3>posts</h3>
+            <ul class="media">
+                <li>
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            <img class="media-object" src="../../public/images/photo.jpg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Middleadmin aligned media</h4>
+                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <span class="atheist">作者：<b>admin</b></span>
+                        <p>人生有一种艰难，是舍弃无比熟30悉的生活，重新开始。
+                            布里特-玛丽是那种你能想象到的最无趣的63岁女人，因为她不允许生活里有任何波澜。
+                            每天6点准时起床，12点必须用餐，从不在天黑后出门，床单整理得一尘不染，否则就不是“文
+                            人的做法”。她有许多许多清单，甚至有一张记录所有清单的清单，以保证她和丈夫的太平日子万无
+                            <strong>‥‥‥</strong>
+                        </p>
+                        <em class="info label-info">阅读全文</em>
+                        <em class="black">评论：20</em>
+                        <em class="black">阅读：20</em>
+                    </div>
+                    <hr class="text-center">
+                </li>
+                <li>
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            <img class="media-object" src="../../public/images/photo.jpg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Middleadmin aligned media</h4>
+                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <span class="atheist">作者：<b>admin</b></span>
+                        <p>人生有一种艰难，是舍弃无比熟30悉的生活，重新开始。
+                            布里特-玛丽是那种你能想象到的最无趣的63岁女人，因为她不允许生活里有任何波澜。
+                            每天6点准时起床，12点必须用餐，从不在天黑后出门，床单整理得一尘不染，否则就不是“文
+                            人的做法”。她有许多许多清单，甚至有一张记录所有清单的清单，以保证她和丈夫的太平日子万无
+                            <strong>‥‥‥</strong>
+                        </p>
+                        <em class="info label-info">阅读全文</em>
+                        <em class="black">评论：20</em>
+                        <em class="black">阅读：20</em>
+                    </div>
+                    <hr class="text-center">
+                </li>
+                <li>
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            <img class="media-object" src="../../public/images/photo.jpg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Middleadmin aligned media</h4>
+                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <span class="atheist">作者：<b>admin</b></span>
+                        <p>人生有一种艰难，是舍弃无比熟30悉的生活，重新开始。
+                            布里特-玛丽是那种你能想象到的最无趣的63岁女人，因为她不允许生活里有任何波澜。
+                            每天6点准时起床，12点必须用餐，从不在天黑后出门，床单整理得一尘不染，否则就不是“文
+                            人的做法”。她有许多许多清单，甚至有一张记录所有清单的清单，以保证她和丈夫的太平日子万无
+                            <strong>‥‥‥</strong>
+                        </p>
+                        <em class="info label-info">阅读全文</em>
+                        <em class="black">评论：20</em>
+                        <em class="black">阅读：20</em>
+                    </div>
+                    <hr class="text-center">
+                </li>
+                <li>
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            <img class="media-object" src="../../public/images/photo.jpg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Middleadmin aligned media</h4>
+                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <span class="atheist">作者：<b>admin</b></span>
+                        <p>人生有一种艰难，是舍弃无比熟30悉的生活，重新开始。
+                            布里特-玛丽是那种你能想象到的最无趣的63岁女人，因为她不允许生活里有任何波澜。
+                            每天6点准时起床，12点必须用餐，从不在天黑后出门，床单整理得一尘不染，否则就不是“文
+                            人的做法”。她有许多许多清单，甚至有一张记录所有清单的清单，以保证她和丈夫的太平日子万无
+                            <strong>‥‥‥</strong>
+                        </p>
+                        <em class="info label-info">阅读全文</em>
+                        <em class="black">评论：20</em>
+                        <em class="black">阅读：20</em>
+                    </div>
+                    <hr class="text-center lang">
+                </li>
+                <li>
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            <img class="media-object" src="../../public/images/photo.jpg" alt="photo">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Middleadmin aligned media</h4>
+                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <span class="atheist">作者：<b>admin</b></span>
+                        <p>人生有一种艰难，是舍弃无比熟30悉的生活，重新开始。
+                            布里特-玛丽是那种你能想象到的最无趣的63岁女人，因为她不允许生活里有任何波澜。
+                            每天6点准时起床，12点必须用餐，从不在天黑后出门，床单整理得一尘不染，否则就不是“文
+                            人的做法”。她有许多许多清单，甚至有一张记录所有清单的清单，以保证她和丈夫的太平日子万无
+                            <strong>‥‥‥</strong>
+                        </p>
+                        <em class="info label-info">阅读全文</em>
+                        <em class="black">评论：20</em>
+                        <em class="black">阅读：20</em>
+                    </div>
+                    <hr class="text-center">
+                </li>
+            </ul>
+            <nav aria-label="Page navigation" class="text-center page-box">
+                <ul class="pagination">
+                    <li><a href="#" aria-label="Previous">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next">下一页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<% include ./footer.ejs %>
