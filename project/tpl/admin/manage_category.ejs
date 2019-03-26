@@ -1,0 +1,39 @@
+<% include ./header.ejs%>
+<div class="container">
+    <table class="table table-bordered table-striped text-center text-center  bg-color">
+        <tr>
+            <td>ID</td>
+            <td>类名</td>
+            <td>操作</td>
+        </tr>
+        <% for(var i = 0;i < data.length;i++){ %>
+        <tr>
+            <td><%= data[i]._id %></td>
+            <td><%= data[i].name %></td>
+            <td class="box1">
+                <a id="modify" data-toggle="modal" data-target="#exampleModal">修改</a>
+                <a id="cancel" href="javascript:;">删除</a>
+                <input type="hidden" class="int" value="<%= data[i]._id %>">
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">修改分类</h4>
+            </div>
+                <div class="modal-body">
+                    <label for="recipient-name" class="control-label">新分类：</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="sub">submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

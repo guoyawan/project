@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/xcConfirm.css">
+    <link rel="stylesheet" href="../../public/css/admin.css">
+    <script src="../../public/js/jquery.1.10.2.min.js"></script>
+    <script src="../../public/js/xcConfirm.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/admin.js"></script>
+</head>
+<body>
+<img  class="admin-background" src="../../public/images/ting.jpg" alt="background">
+<div class="admin-nav modify_nav text-center">
+    <a class="modify_left modify_hover" href="/admin/manage_article">退出</a>
+    <a class="modify_right modify_hover" href="/">首页</a>
+    <a class="modify_title" href="javascript:;">修改文章</a>
+</div>
+<div class="container article">
+    <div class="form-group">
+        <input id="article_id" type="hidden" value="<%=article[0]._id%>">
+        <label >标题</label>
+        <input id="modify_title" type="text" class="form-control" placeholder="title" value="<%=article[0].title%>">
+        <label >简介</label>
+        <textarea id="modify_description" class="form-control" rows="3" placeholder="description"><%=article[0].description%></textarea>
+        <label >内容</label>
+        <textarea id="modify_content" class="form-control" rows="15" placeholder="content" ><%=article[0].content%></textarea>
+        <label>分类</label>
+        <select class="form-control" id="modify_select">
+            <option><%=article[0].select%></option>
+            <%for(var i=0;i<cate.length;i++){%>
+            <option abc="<%=cate[i]._id%>"><%=cate[i].name%></option>
+            <%}%>
+        </select>
+    </div>
+    <button class="btn btn-default" id="modify-btn">Submit</button>
+</div>
+</body>
+</html>

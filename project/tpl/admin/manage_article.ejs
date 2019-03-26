@@ -1,0 +1,35 @@
+<% include ./header.ejs%>
+<div class="container article">
+    <table class="table table-bordered table-striped text-center  bg-color">
+        <tr>
+            <td>标题</td>
+            <td>ID</td>
+            <td>分类</td>
+            <td>管理</td>
+        </tr>
+        <%for(var i=0;i<article.length;i++){%>
+        <tr>
+            <td><%=article[i].title%></td>
+            <td><%=article[i]._id%></td>
+            <td><%=article[i].select%></td>
+            <td class="box">
+                <a id="modify_article" href="manage_article/modify?id=<%=article[i]._id%>&sel_id=<%=article[i].sel_id%>">修改</a>
+                <a id="cancel_article" href="javascript:;">删除</a>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+</div>
+<nav>
+    <ul class="pager">
+        <li><a href="/admin/manage_article?page=<%=page-1 %>">上一页</a></li>
+        <li>一共 <b><%=count%></b> 条数据，每页 <b><%=limit %></b> 条,当前<b><%=page %></b>/<b><%=pages %></b>页 </li>
+        <%if(page===pages){%>
+        <li><a href="javascript:;">下一页</a></li>
+        <%} else{%>
+        <li><a href="/admin/manage_article?page=<%=page+1 %>">下一页</a></li>
+        <%}%>
+    </ul>
+</nav>
+</body>
+</html>

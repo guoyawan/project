@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/xcConfirm.css">
+    <link rel="stylesheet" href="../../public/css/admin.css">
+    <script src="../../public/js/jquery.1.10.2.min.js"></script>
+    <script src="../../public/js/xcConfirm.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/admin.js"></script>
+</head>
+<body>
+<img  class="admin-background" src="../../public/images/ting.jpg" alt="background">
+<div class="admin-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                ☰
+            </button>
+            <b class="navbar-brand" href="javascript:;">后台管理</b>
+        </div>
+        <div class="collapse navbar-collapse  text-center" id="bs-example-navbar-collapse-1">
+            <ul class="text-center nav navbar-nav" id="nav-box" num="<%=num%>">
+                <li><a class="admin-color" href="/admin">用户数据</a></li>
+                <li><a class="admin-color " href="/admin/manage_category">分类管理</a></li>
+                <li><a class="admin-color " href="/admin/add_category">新增分类</a></li>
+                <li><a class="admin-color " href="/admin/add_article">新增文章</a></li>
+                <li><a class="admin-color " href="/admin/manage_article">文章管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="admin-color" href="/">首页</a></li>
+                <li class="dropdown"> <a class="admin-color" href="/clover">clover</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+

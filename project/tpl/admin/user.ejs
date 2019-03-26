@@ -1,0 +1,22 @@
+<% include ./header.ejs%>
+<div class="container">
+        <table class="table table-bordered table-striped text-center  bg-color">
+            <tr>
+                <td>username</td>
+                <td>password</td>
+                <td>isAdmin</td>
+                <td>id</td>
+            </tr>
+            <%for(var i=0;i<user.length;i++){%>
+            <tr>
+                <td><%=user[i].username%></td>
+                <td><%=user[i].password%></td>
+                <td><%=user[i].isAdmin%></td>
+                <td><%=user[i]._id%></td>
+            </tr>
+            <%}%>
+        </table>
+    </div>
+<% include page.ejs %>
+</body>
+</html>

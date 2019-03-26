@@ -1,0 +1,185 @@
+.warning{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    line-height: 35px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    z-index: 999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rosybrown;
+}
+
+/*用户信息*/
+.navbar-toggle {
+    padding: 1px 7px;
+    color:rgba(160,138,185,1);
+    background-color: rgba(255,255,255,.7);
+    font-size: 20px;
+}
+
+img.admin-background{
+    position:fixed;
+    z-index: -1;
+    width: 100%;
+    min-width: 1920px;
+    height: 100%;
+    min-height: 1080px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.admin-nav{
+    background: rgba(160,138,185,0.7);
+}
+
+.table-bordered {
+    border: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.table-bordered > tbody > tr > td {
+    border: none;
+}
+
+.bg-color{
+    color: #23527c;
+    background-color: rgba(255,255,255,.7);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background: rgba(160,138,185,0.7);
+}
+
+.table-striped > tbody > tr:hover{
+    background-color: rgba(255,255,255,.8);
+}
+/*分类修改*/
+.pager{
+    height: 100%;
+    border-radius: 10px;
+    color: #23527c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.modal-title{
+    color:#A08AB9;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color:rgba(160,138,185,0.7);;
+    border-color: rgba(160,138,185,1);
+}
+
+.modal-content{
+   opacity: 0.9;
+}
+
+.modal-body {
+    padding: 0 15px;
+}
+
+.control-label{
+    color:  #A08AB9;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.navbar-header b{
+    color: rgba(255,255,255,.9);
+    font-size: 18px;
+}
+a.admin-color{
+    color: #EDF6FF;
+}
+
+a.admin-color:hover{
+    color: #A08AB9;
+    background-color: rgba(255,255,255,.8);
+}
+
+a.seled{
+    color: #A08AB9;
+    background-color: rgba(255,255,255,.8);
+}
+
+.dropdown-menu{
+    background:  rgba(255,255,255,.7);
+}
+/*添加分类*/
+.m-top{
+    margin-top: 20px;
+    color:  #A08AB9;
+    font-size: 20px;
+}
+
+#txt{
+    background-color: rgba(255,255,255,.7);
+    border-color: #A08AB9;
+    margin-bottom: 20px;
+}
+
+.btn{
+    color: #A08AB9;
+    border-color: #ececec;
+    background-color: rgba(255,255,255,9);
+}
+
+/*添加文章*/
+.article{
+    color:  #A08AB9;
+    font-size: 20px;
+}
+
+#article-btn{
+    margin-top: 20px;
+}
+
+.article label{
+    margin-top: 20px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-control{
+    background-color: rgba(255,255,255,.8);
+    border-color: #A08AB9;
+    resize: none;
+}
+/*文章管理*/
+.article {
+    font-size: 14px;
+}
+/*修改文章*/
+a.modify_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.modify_nav a{
+    display: block;
+    color: #EDF6FF;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+a.modify_left{
+    float: left;
+}
+a.modify_right{
+    float: right;
+}
+a:hover{
+    text-decoration: none;
+}
+a.modify_hover:hover{
+    color: #A08AB9;
+    background-color: rgba(255,255,255,.8);
+}
