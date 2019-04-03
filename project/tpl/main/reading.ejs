@@ -8,39 +8,19 @@
     <div class="clover container text-center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-xs-12">
-                <h1>题目</h1>
-                发表时间：<em>2018/05/02</em> 评论量：<span>20</span>
+                <h1><%=article.title%></h1>
+                发表时间：<em><%=article.time%></em> 评论量：<span><%=article.discuss.length%></span>
                 <hr class="line">
                 <div class="atheist-language thumbnail text-left">
                     <img src="../../public/images/a.png" alt="img">
                     <h3>简介：</h3>
-                    <p>一个Wordpress二次元个人博客主题，简约而不简单，Made BY 江程训。
-                        最近总感觉作为一个Wordpress老玩家（其实也不算多老，也就接触这个网站程序一年），
-                        自己似乎少了点什么，于是就做了这款主题。 本主题在Akina的分支Siren的基础上魔改，
-                        希望大家喜欢，也希望大家能够在Github去Star这个主题。
-                    </p>
+                    <p><%=article.description%></p>
                 </div>
                 <div class="msg thumbnail text-left">
                     <h3>内容：</h3>
-                    <p>一个Wordpress二次元个人博客主题，简约而不简单，Made BY 江程训。
-                        最近总感觉作为一个Wordpress老玩家（其实也不算多老，也就接触这个网站程序一年），
-                        自己似乎少了点什么，于是就做了这款主题。 本主题在Akina的分支Siren的基础上魔改，
-                        希望大家喜欢，也希望大家能够在Github去Star这个主题。
-                        一个Wordpress二次元个人博客主题，简约而不简单，Made BY 江程训。
-                        最近总感觉作为一个Wordpress老玩家（其实也不算多老，也就接触这个网站程序一年），
-                        自己似乎少了点什么，于是就做了这款主题。 本主题在Akina的分支Siren的基础上魔改，
-                        希望大家喜欢，也希望大家能够在Github去Star这个主题。
-                        一个Wordpress二次元个人博客主题，简约而不简单，Made BY 江程训。
-                        最近总感觉作为一个Wordpress老玩家（其实也不算多老，也就接触这个网站程序一年），
-                        自己似乎少了点什么，于是就做了这款主题。 本主题在Akina的分支Siren的基础上魔改，
-                        希望大家喜欢，也希望大家能够在Github去Star这个主题。
-                        一个Wordpress二次元个人博客主题，简约而不简单，Made BY 江程训。
-                        最近总感觉作为一个Wordpress老玩家（其实也不算多老，也就接触这个网站程序一年），
-                        自己似乎少了点什么，于是就做了这款主题。 本主题在Akina的分支Siren的基础上魔改，
-                        希望大家喜欢，也希望大家能够在Github去Star这个主题。
-
-                    </p>
+                    <p><%=article.content%></p>
                 </div>
+                <input id="single_id" type="hidden" value="<%=article._id%>">
                 <% include ./msg.ejs %>
             </div>
         </div>

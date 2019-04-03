@@ -4,8 +4,12 @@ var route = express.Router();
 
 var Userdata=require('../models/User');
 
+var Category=require('../models/Category');
+
 route.get('/user',function (req,res) {
-    res.render('main/load.ejs',{});
+    Category.find().then(function (Cate) {
+    res.render('main/load.ejs',{Cate:Cate});
+   })
 });
 
 route.use(function (req, res, next) {
@@ -78,4 +82,5 @@ route.get('/user/logout',function (req,res) {
     res.send(json);
     res.end();
 });
+
 module.exports = route;

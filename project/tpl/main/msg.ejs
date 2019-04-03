@@ -7,81 +7,39 @@
     <a href="javascript:;">彳蓝小白</a>
 </div>
 <div class="jumbotron">
-    <a id="up" class="" href="javascript:;">看看上一篇文章吧</a>
-    <a id="down" href="javascript:;">看看下一篇文章吧</a>
+    <a id="up" class="" href="/api/user">狗子，快去去注册吧</a>
+    <a id="down" href="/api/user">狗子，快去去登录吧</a>
 </div>
-<form class="text-left">
-    <div class="form-group">
-        <textarea id="msg" class="form-control clover-msg" rows="5" placeholder="大佬来留言啊"></textarea>
-    </div>
-    <button type="submit" class="btn btn-default" id="msg-btn">提交</button>
-</form>
-<div class="clover-msg text-left">
+
+<div class="clover-msg text-left clover_box">
     <ol class="breadcrumb">
         <li><a href="#">Comments</a></li>
         <li><a href="#">评论</a></li>
     </ol>
     <div class="list">
-        <ul class="media">
+        <div class="text-left">
+            <div class="form-group">
+                <textarea id="msg" class="form-control clover-msg" rows="5" placeholder="大佬来留言啊"></textarea>
+            </div>
+            <button type="button" class="btn btn-default" id="msg-btn">提交</button>
+        </div>
+        <ul class="media reading-media">
+            <%for(var i=article.discuss.length-1;i>=0;i--){%>
             <li>
                 <img class="media-object msg-photo" src="../../public/images/photo.jpg" alt="photo">
-                <div class="media-body msg-body">
+                <div class="media-body msg-body"  acd="<%=article._id%>">
                     <div class="msg-time">
-                        <strong>昵称</strong>
-                        <span>发表时间：<b>2019年3月5日</b></span>
+                        <input id="blon" type="hidden" value="<%=usersinfo.isAdmin%>">
+                        <strong id="msg_users" user="<%=usersinfo.username%>"><%=article.discuss[i].username%></strong>
+                        <span>发表时间：<b><%=article.discuss[i].time%></b></span>
                     </div>
-                    <p class="msg-con">留言</p>
-                    <em class="info label-info">回复</em>
+                    <p class="msg-con"><%=article.discuss[i].content%></p>
+                    <em class="info label-info" acc="<%=article.discuss[i].id%>">删除</em>
                 </div>
                 <hr class="text-center">
             </li>
-            <li>
-                <img class="media-object msg-photo" src="../../public/images/photo.jpg" alt="photo">
-                <div class="media-body msg-body">
-                    <div class="msg-time">
-                        <strong>昵称</strong>
-                        <span>发表时间：<b>2019年3月5日</b></span>
-                    </div>
-                    <p class="msg-con">留言</p>
-                    <em class="info label-info">回复</em>
-                </div>
-                <hr class="text-center">
-            </li>
-            <li>
-                <img class="media-object msg-photo" src="../../public/images/photo.jpg" alt="photo">
-                <div class="media-body msg-body">
-                    <div class="msg-time">
-                        <strong>昵称</strong>
-                        <span>发表时间：<b>2019年3月5日</b></span>
-                    </div>
-                    <p class="msg-con">留言</p>
-                    <em class="info label-info">回复</em>
-                </div>
-                <hr class="text-center">
-            </li>
-            <li>
-                <img class="media-object msg-photo" src="../../public/images/photo.jpg" alt="photo">
-                <div class="media-body msg-body">
-                    <div class="msg-time">
-                        <strong>昵称</strong>
-                        <span>发表时间：<b>2019年3月5日</b></span>
-                    </div>
-                    <p class="msg-con">留言</p>
-                    <em class="info label-info">回复</em>
-                </div>
-                <hr class="text-center">
-            </li>
+            <%}%>
+            <input id="msg_user" type="hidden" value="<%=usersinfo.username%>">
         </ul>
-        <nav aria-label="Page navigation" class="text-center page-box">
-            <ul class="pagination">
-                <li><a href="#" aria-label="Previous">上一页</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#" aria-label="Next">下一页</a></li>
-            </ul>
-        </nav>
     </div>
 </div>

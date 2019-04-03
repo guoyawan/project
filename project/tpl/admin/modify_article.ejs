@@ -30,7 +30,7 @@
         <textarea id="modify_content" class="form-control" rows="15" placeholder="content" ><%=article[0].content%></textarea>
         <label>分类</label>
         <select class="form-control" id="modify_select">
-            <option><%=article[0].select%></option>
+            <option abc="<%=article[0].sel_id%>"><%=article[0].select%></option>
             <%for(var i=0;i<cate.length;i++){%>
             <option abc="<%=cate[i]._id%>"><%=cate[i].name%></option>
             <%}%>

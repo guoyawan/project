@@ -164,7 +164,7 @@ $(function () {
                         id: id
                     },
                     success: function (json) {
-                       if (json.code===6) {
+                       if (json.code===7) {
                            window.location.reload();
                            waring('删除成功')
                        }

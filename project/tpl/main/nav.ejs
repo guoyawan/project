@@ -37,7 +37,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="#">项目简介</a></li>
                     <li><a href="#">Bootstrap</a></li>
-                    <li><a href="#">Github</a></li>
+                    <lir><a href="#">Github</a></lir>
                     <li><a href="#">VUE</a></li>
                     <li><a href="#">Angle</a></li>
                 </ul>
@@ -47,11 +47,9 @@
                     文章分类<span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu nav-three" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">感情</a></li>
-                    <li><a href="#">Bootstrap</a></li>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">VUE</a></li>
-                    <li><a href="#">Angle</a></li>
+                    <%for(var i=0; i<Cate.length;i++){%>
+                    <li class="cate-btn"><a href="/?id=<%=Cate[i]._id%>"><%=Cate[i].name%></a></li>
+                    <%}%>
                 </ul>
             </li>
             <li class="z-1"><a href="/clover">Clover</a></li>

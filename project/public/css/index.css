@@ -137,6 +137,7 @@ body{
     text-align: center;
     min-width: 110px;
 }
+
 .nav-three{
     left: 160px;
 }
@@ -391,12 +392,17 @@ hr.lang{
     height: 90px;
     overflow: hidden;
     color: #44565A;
+    width: 100%;
 }
-
-.pagination > li > a {
-    margin: 0 10px;
+.pager li > a.up_page{
+    float: left;
 }
-
+.pager li > a.down_page{
+    float: right;
+}
+.pager li.page_padding{
+    line-height: 32px;
+}
 .foot{
     height: 70px;
     width: 100%;
@@ -517,6 +523,7 @@ hr.lang{
     border-bottom: #CFCFCF 1px dashed;
     border-top: #CFCFCF 1px dashed;
     padding: 10px 0;
+    color:#acacac;
 }
 
 .reading form{
@@ -572,6 +579,10 @@ hr.line{
     margin-top: 20px;
 }
 
+.clover_box{
+    padding: 20px 0;
+}
+
 .media img.msg-photo {
     width: 50px;
     height: 50px;
@@ -598,6 +609,10 @@ hr.line{
     padding-top: 20px;
 }
 
+.reading-media{
+    border: none;
+}
+
 .msg-body {
     padding: 5px;
 }
@@ -606,5 +621,6 @@ hr.line{
     float: left;
     height: auto;
     width: 100%;
-    text-indent: 10px;
+    padding: 10px;
+    text-indent: 0;
 }

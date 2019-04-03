@@ -1,4 +1,5 @@
 $(function () {
+    //封装的提示函数
     function waring(string) {
         $('body').append('<div class="warning">'+string+'</div>');
         $('.warning').fadeIn(function () {
@@ -7,21 +8,21 @@ $(function () {
             })
         })
     }
-
+    //侧边栏显示
     $('#side-open').on('click',function () {
        $('.right-side').animate({left:0},1000);
        $('.main').animate({left:'160px'},1000);
        $('.cover').fadeIn();
     });
-
+    //侧边栏掩藏
     $('#side-out').on('click',function () {
         $('.right-side').animate({left:'-160px'},1000);
         $('.main').animate({left:0},1000);
         $('.cover').fadeOut();
     });
-
+    //登录提示
     $('[data-toggle="tooltip"]').tooltip();
-
+    //注册显示
     $('#sig').on('click',function () {
         $('#load-logo').fadeIn().fadeOut();
         $('.load').fadeOut(function () {
@@ -30,7 +31,7 @@ $(function () {
         });
 
     });
-
+    // 登录显示
     $('#load').on('click',function () {
         $('#load-logo').fadeOut();
         $('.sig').fadeOut(function () {
@@ -39,7 +40,7 @@ $(function () {
         });
 
     });
-
+    // 退出登录
     $('#logout').on('click', function () {
         $.ajax({
             url: 'api/user/logout',
@@ -51,7 +52,7 @@ $(function () {
             }
         })
     });
-
+    //注册
     $('#sig-btn').on('click',function () {
         if($('#username1').val()===''&&$('#password1').val()===''){
             waring('用户名密码均不可为空');
@@ -98,7 +99,7 @@ $(function () {
             }
         })
     });
-
+    // 登录
     $('#log-btn').on('click',function () {
         if($('#username').val()===''&&$('#password').val()===''){
            waring('用户名密码均不可为空！');
@@ -132,4 +133,68 @@ $(function () {
 
 
     });
+    //留言
+    $('#msg-btn').on('click',function () {
+       if($('#msg_user').val()===''){
+           waring('请登录后评论')
+       }else if($('#msg').val()===''){
+            waring('留言不能为空')
+        }else{
+            $.ajax({
+                url:"reading/massage",
+                type:'post',
+                dataType:'json',
+                data:{
+                    discuss:$('#msg').val(),
+                    id:$('#single_id').val(),
+                    username:$('#msg_user').val()
+                },
+                success:function (suc) {
+                    console.log(suc);
+                   if(suc.code===1){
+                       $('#msg_user').html()==='';
+                       window.location.reload();
+                   }
+                },
+                error:function (err) {
+                    console.log(err);
+                }
+            })
+        }
+    });
+    //留言删除
+    $('.msg-body').find('em').on('click',function () {
+        var msg_id= $(this).attr('acc');
+        var art_id= $('.msg-body').attr('acd');
+        var txt=  "确定要删除吗？";
+
+        if ($("#msg_users").html()===$("#msg_users").attr('user')){
+        window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.confirm, {
+            onOk: function () {
+                $.ajax({
+                    url: 'reading/msg/del',
+                    type: 'get',
+                    dataType: 'json',
+                    data: {
+                        msg_id: msg_id,
+                        art_id: art_id
+
+                    },
+                    success: function (json) {
+                        console.log(json);
+                        if (json.code === 2) {
+                            window.location.reload();
+                            waring('删除成功')
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            }
+            })
+        }else{
+            waring('主人，你只能删除自己发表的评论呦')
+        }
+    })
 });

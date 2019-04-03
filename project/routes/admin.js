@@ -166,7 +166,7 @@ route.get('/manage_article/modify', function (req, res) {
 });
 //文章修改
 route.post('/manage_article/modify/work',function (req,res) {
-    console.log(req);
+    // console.log(req);
     Article.update({_id:req.body.id},{title:req.body.title,description: req.body.description,
         content: req.body.content,select:req.body.select,sel_id:req.body.sel_id}).then(function (info) {
             json.code=8;
